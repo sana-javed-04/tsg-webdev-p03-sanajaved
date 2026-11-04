@@ -45,9 +45,9 @@ A modern, commercial-grade multi-page web publication designed and engineered fr
 
 ## 📱 Breakpoints Tested
 
-* **Desktop & Widescreen:** 1200px – 1440px+
-* **Tablets & iPads:** 768px – 1024px
-* **Mobile Phones:** 360px – 480px (Tested down to 320px)
+* **Desktop & Widescreen:** 1200px – 1440px+  [Desktop View](laptop.png) 
+* **Tablets & iPads:** 768px – 1024px  [Tablet View](tablet.png)
+* **Mobile Phones:** 360px – 480px (Tested down to 320px)  [Mobile View](mobile.png)
 
 ---
 
@@ -97,12 +97,3 @@ cd tsg-webdev-p03-sanajaved
 * **Profiles:** [Personal Portfolio](https://sanajaved-dev.vercel.app/) | [GitHub](https://github.com/sana-javed-04/) | [LinkedIn](https://www.linkedin.com/in/sana-javed-dev/)
 
 ---
-
-## 📸 Responsive Screenshots
-
-Desktop View (1440px)
-[Desktop View](laptop.png) 
-Tablet View (768px) 
-[Tablet View](tablet.png)
-Mobile View (360px) 
-[Mobile View](mobile.png)
