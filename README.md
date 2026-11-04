@@ -100,6 +100,9 @@ cd tsg-webdev-p03-sanajaved
 
 ## 📸 Responsive Screenshots
 
-| Desktop View (1440px) | Tablet View (768px) | Mobile View (360px) |
-| --- | --- | --- |
-|  |  |  |
+Desktop View (1440px)
+[Desktop View](laptop.png) 
+Tablet View (768px) 
+[Tablet View](tablet.png)
+Mobile View (360px) 
+[Mobile View](mobile.png)
