@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Sana Javed — Web developer and creator of Aura Studio. Send project inquiries or connect online."
+    />
+    <meta name="author" content="Sana Javed" />
+    <title>AURA | Contact Sana Javed</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Single Shared CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Shared Header -->
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand-title">AURA<span>.</span></a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Contact Header -->
+      <section
+        class="section-spacer"
+        style="padding-top: 3.5rem; padding-bottom: 2rem"
+      >
+        <div class="container section-head">
+          <span class="badge-tag">Get In Touch</span>
+          <h2>Start a New Project</h2>
+          <p>
+            Have a question or looking to collaborate? Send a message through
+            the form or visit my portfolio.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Layout Grid -->
+      <section class="container">
+        <div class="contact-layout">
+          <!-- Left Side: Contact Details + Online Studio Visual -->
+          <aside class="contact-card">
+            <!-- Online Visual Banner for Contact -->
+            <div
+              style="
+                border-radius: var(--radius-sm);
+                overflow: hidden;
+                margin-bottom: 1.5rem;
+                height: 160px;
+                border: 1px solid var(--bg-surface-border);
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                alt="Modern architectural tower workspace"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+
+            <h3>Developer Inquiries</h3>
+            <p>
+              Feel free to reach out directly. I am available for frontend
+              projects, web collaborations, and technical roles.
+            </p>
+
+            <div class="info-row">
+              <i class="fa-solid fa-globe info-icon"></i>
+              <div class="info-text">
+                <h4>Live Portfolio</h4>
+                <p>
+                  <a
+                    href="https://sanajaved-dev.vercel.app/"
+                    target="_blank"
+                    rel="noopener"
+                    style="
+                      color: var(--emerald-accent);
+                      text-decoration: underline;
+                    "
+                  >
+                    sanajaved-dev.vercel.app
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <i class="fa-solid fa-envelope info-icon"></i>
+              <div class="info-text">
+                <h4>Direct Email</h4>
+                <p>
+                  <a href="mailto:hello@theskygen.com">contact@sanajaved.dev</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <i class="fa-solid fa-location-dot info-icon"></i>
+              <div class="info-text">
+                <h4>Program Reference</h4>
+                <p>The Sky Gen Web Development<br />Ref: TSG/WD/P03/2026</p>
+              </div>
+            </div>
+
+            <div
+              style="
+                margin-top: 1.8rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+              "
+            >
+              <a
+                href="https://sanajaved-dev.vercel.app/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-secondary"
+                style="width: 100%; justify-content: center"
+              >
+                Open Full Portfolio
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </aside>
+
+          <!-- Right Side: Styled Form -->
+          <section class="form-card">
+            <form
+              action="#"
+              method="POST"
+              onsubmit="
+                event.preventDefault();
+                alert('Thank you, Sana Javed has received your message!');
+              "
+            >
+              <div class="form-group">
+                <label for="userName">Full Name</label>
+                <input
+                  type="text"
+                  id="userName"
+                  name="userName"
+                  class="form-input"
+                  placeholder="e.g. Sana Javed"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="userEmail">Email Address</label>
+                <input
+                  type="email"
+                  id="userEmail"
+                  name="userEmail"
+                  class="form-input"
+                  placeholder="name@domain.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="userSubject">Subject</label>
+                <input
+                  type="text"
+                  id="userSubject"
+                  name="userSubject"
+                  class="form-input"
+                  placeholder="Project Inquiry / Job Opportunity"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage">Message</label>
+                <textarea
+                  id="userMessage"
+                  name="userMessage"
+                  class="form-input"
+                  placeholder="Write your message here in simple English..."
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="width: 100%; justify-content: center"
+              >
+                Send Message <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>AURA<span>.</span></h3>
+            <p>
+              A multi-page responsive web project crafted for The Sky Gen Web
+              Development Batch (Ref: TSG/WD/P03/2026).
+            </p>
+            <a
+              href="https://sanajaved-dev.vercel.app/"
+              target="_blank"
+              rel="noopener"
+              class="portfolio-link-chip"
+            >
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Sana
+              Javed Portfolio
+            </a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Developer</a></li>
+              <li><a href="blog.html">Blog Articles</a></li>
+              <li><a href="contact.html">Contact Form</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Developer</h4>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://sanajaved-dev.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  >Sana Javed (Portfolio)</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com" target="_blank" rel="noopener"
+                  >GitHub Profile</a
+                >
+              </li>
+              <li><a href="contact.html">Send a Message</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Aura Studio &bull; Developed by
+            <strong>Sana Javed</strong>.
+          </p>
+          <p>
+            <a
+              href="https://sanajaved-dev.vercel.app/"
+              target="_blank"
+              rel="noopener"
+              style="color: var(--gold-accent)"
+              >sanajaved-dev.vercel.app</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

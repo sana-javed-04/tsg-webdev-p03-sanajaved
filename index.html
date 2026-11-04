@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aura Studio — High-performance frontend engineering, design systems, and digital articles by Sana Javed."
+    />
+    <meta name="author" content="Sana Javed" />
+    <title>AURA | Home — Sana Javed</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Single Shared CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Shared Header -->
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand-title">AURA<span>.</span></a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- 1. Double Split Hero (Left Copy, Right Visual Frame) -->
+      <section class="container split-hero">
+        <!-- Hero Left: Typography & Actions -->
+        <div class="hero-left">
+          <span class="badge-tag">Design Systems &amp; Web Development</span>
+          <h1 class="hero-heading">
+            Precision Engineering with <em>Modern Soul</em>
+          </h1>
+          <p class="hero-text">
+            I am Sana Javed — a frontend developer building clean, lightweight
+            web applications. I focus on semantic markup, accessible interfaces,
+            and zero-compromise responsiveness.
+          </p>
+          <div class="hero-cta-group">
+            <a href="blog.html" class="btn btn-primary">
+              Explore Journal <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="about.html" class="btn btn-secondary"> About Developer </a>
+          </div>
+        </div>
+
+        <!-- Hero Right: Online Showcase Image -->
+        <div class="hero-right">
+          <div class="hero-visual-frame">
+            <div class="hero-img-box">
+              <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80"
+                alt="Minimalist tech workspace featuring code architecture and glowing dark IDE screen"
+              />
+              <div class="hero-badge-overlay">
+                <div>
+                  <p class="hero-badge-title">Built by Sana Javed</p>
+                  <p class="hero-badge-subtitle">
+                    Semantic HTML5 &bull; Pure CSS3
+                  </p>
+                </div>
+                <i
+                  class="fa-solid fa-circle-check"
+                  style="color: var(--gold-accent)"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Performance Stats Banner -->
+      <section class="container">
+        <div class="stats-banner">
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Semantic HTML5</p>
+          </div>
+          <div class="stat-item">
+            <h3>0</h3>
+            <p>JS Dependencies</p>
+          </div>
+          <div class="stat-item">
+            <h3>&lt; 0.8s</h3>
+            <p>Ultra-Fast Load</p>
+          </div>
+          <div class="stat-item">
+            <h3>A+</h3>
+            <p>Mobile Fidelity</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Core Principles Grid -->
+      <section class="section-spacer">
+        <div class="container">
+          <div class="section-head">
+            <h2>Core Principles</h2>
+            <p>
+              Every line of markup is crafted for performance, accessibility,
+              and visual balance.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-box">
+              <div class="feature-icon">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <h3>Unified Architecture</h3>
+              <p>
+                One global stylesheet governs typography, color tokens, and
+                layout logic across all pages without duplicate declarations.
+              </p>
+            </article>
+
+            <article class="feature-box">
+              <div class="feature-icon">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <h3>Fluid Responsiveness</h3>
+              <p>
+                Every layout flexes naturally across screens from 320px
+                smartphones to high-res desktop monitors without horizontal
+                scrolling.
+              </p>
+            </article>
+
+            <article class="feature-box">
+              <div class="feature-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <h3>Smooth Interactions</h3>
+              <p>
+                Hardware-accelerated CSS keyframes, hover lifts, and glowing
+                emerald accents that feel tactile and responsive.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. LATEST BLOG POSTS SECTION (HOME PAGE DISPLAY) -->
+      <section
+        class="section-spacer"
+        style="background: rgba(255, 255, 255, 0.015)"
+      >
+        <div class="container">
+          <div class="section-head">
+            <span class="badge-tag">Fresh Dispatches</span>
+            <h2>Latest From The Journal</h2>
+            <p>
+              Explore recent research and development notes from my technical
+              journal.
+            </p>
+          </div>
+
+          <!-- Latest 2 Featured Cards with Online Images -->
+          <div class="blog-grid" style="margin-bottom: 2.5rem">
+            <article class="blog-card">
+              <div class="card-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80"
+                  alt="Structured front-end code with shared styling principles"
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-meta"
+                  >12 Oct 2026 &bull; Web Development</span
+                >
+                <h3 class="card-title">
+                  Shared Stylesheets in Multi-Page Applications
+                </h3>
+                <p class="card-text">
+                  Best practices for structuring single CSS files that load
+                  cleanly across all static pages without collisions or
+                  duplicate rules.
+                </p>
+                <a href="blog.html#article-modal-1" class="card-cta">
+                  Read Article <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="card-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=800&q=80"
+                  alt="Responsive multi-screen design for smartphones and tablets"
+                />
+              </div>
+              <div class="card-body">
+                <span class="card-meta"
+                  >04 Oct 2026 &bull; Responsive Design</span
+                >
+                <h3 class="card-title">
+                  Eliminating Mobile Overflow &amp; Horizontal Scroll
+                </h3>
+                <p class="card-text">
+                  How to manage CSS flexbox wrapping, media queries, and
+                  viewport constraints to guarantee flawless phone
+                  compatibility.
+                </p>
+                <a href="blog.html#article-modal-2" class="card-cta">
+                  Read Article <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div style="text-align: center">
+            <a href="blog.html" class="btn btn-secondary">
+              View All Articles in Blog <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Developer Spotlight Banner -->
+      <section
+        class="section-spacer"
+        style="background: rgba(20, 184, 166, 0.03)"
+      >
+        <div class="container" style="text-align: center; max-width: 680px">
+          <span class="badge-tag">Developer Spotlight</span>
+          <h2
+            style="
+              font-family: var(--font-serif);
+              font-size: 2.2rem;
+              margin-bottom: 0.8rem;
+            "
+          >
+            Looking for my production projects?
+          </h2>
+          <p style="color: var(--text-muted); margin-bottom: 2rem">
+            Explore my complete developer portfolio, client projects, and
+            full-stack repositories.
+          </p>
+          <a
+            href="https://sanajaved-dev.vercel.app/"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-primary"
+          >
+            Open sanajaved-dev.vercel.app
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>AURA<span>.</span></h3>
+            <p>
+              A multi-page responsive web project crafted for The Sky Gen Web
+              Development Batch (Ref: TSG/WD/P03/2026).
+            </p>
+            <a
+              href="https://sanajaved-dev.vercel.app/"
+              target="_blank"
+              rel="noopener"
+              class="portfolio-link-chip"
+            >
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Sana
+              Javed Portfolio
+            </a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Developer</a></li>
+              <li><a href="blog.html">Blog Articles</a></li>
+              <li><a href="contact.html">Contact Form</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Developer</h4>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://sanajaved-dev.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  >Sana Javed (Portfolio)</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com" target="_blank" rel="noopener"
+                  >GitHub Profile</a
+                >
+              </li>
+              <li><a href="contact.html">Send a Message</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Aura Studio &bull; Developed by
+            <strong>Sana Javed</strong>.
+          </p>
+          <p>
+            <a
+              href="https://sanajaved-dev.vercel.app/"
+              target="_blank"
+              rel="noopener"
+              style="color: var(--gold-accent)"
+              >sanajaved-dev.vercel.app</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

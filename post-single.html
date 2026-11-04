@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="In-depth guide on maintaining clean, modular CSS across multi-page web applications by Sana Javed."
+    />
+    <meta name="author" content="Sana Javed" />
+    <title>AURA | Shared Stylesheets in Multi-Page Applications</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Shared Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Shared Header -->
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand-title">AURA<span>.</span></a>
+        <nav aria-label="Primary Navigation">
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="blog.html" class="nav-link active">Blog</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <article
+        class="container"
+        style="max-width: 840px; padding: 4.5rem 0 6rem"
+      >
+        <!-- Breadcrumb & Metadata -->
+        <div style="margin-bottom: 2rem">
+          <div
+            style="
+              display: flex;
+              gap: 0.6rem;
+              align-items: center;
+              font-size: 0.82rem;
+              color: var(--text-muted);
+              margin-bottom: 1rem;
+            "
+          >
+            <a href="index.html" style="color: var(--text-muted)"
+              >&bull; Home</a
+            >
+            <span>/</span>
+            <a href="blog.html" style="color: var(--text-muted)">Blog</a>
+            <span>/</span>
+            <span style="color: var(--emerald-accent)"
+              >Engineering Architecture</span
+            >
+          </div>
+
+          <span class="badge-tag"
+            >Frontend Architecture &bull; 12 October 2026</span
+          >
+          <h1
+            style="
+              font-family: var(--font-serif);
+              font-size: clamp(2.3rem, 4.2vw, 3.4rem);
+              line-height: 1.25;
+              margin-bottom: 1.25rem;
+            "
+          >
+            Shared Stylesheets in Multi-Page Applications
+          </h1>
+
+          <p
+            style="
+              color: var(--text-muted);
+              font-size: 1rem;
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              flex-wrap: wrap;
+            "
+          >
+            <span
+              >Written by
+              <strong style="color: var(--gold-accent)"
+                >Sana Javed</strong
+              ></span
+            >
+            <span>&bull;</span>
+            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+            <span>&bull;</span>
+            <span style="color: var(--emerald-accent)"
+              ><i class="fa-solid fa-tag"></i> #Stylesheets #HTML5</span
+            >
+          </p>
+        </div>
+
+        <!-- Hero Featured Image (Online CDN) -->
+        <div
+          style="
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            margin-bottom: 2.5rem;
+            border: 1px solid var(--bg-surface-border);
+          "
+        >
+          <img
+            src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80"
+            alt="Clean structured frontend code in VS Code editor"
+            style="width: 100%; height: 420px; object-fit: cover"
+          />
+        </div>
+
+        <!-- Article Body Content -->
+        <div
+          style="font-size: 1.05rem; line-height: 1.85; color: var(--text-main)"
+        >
+          <p style="margin-bottom: 1.6rem">
+            One of the fundamental challenges in building static, multi-page
+            websites is maintaining visual consistency without generating
+            repetitive code. Often, developers create individual
+            stylesheets—such as <code>home.css</code>, <code>blog.css</code>,
+            and <code>contact.css</code>—which quickly creates duplicate rules
+            and design drift across pages.
+          </p>
+
+          <h2
+            style="
+              font-family: var(--font-serif);
+              font-size: 1.8rem;
+              margin: 2.2rem 0 1rem;
+              color: var(--gold-accent);
+            "
+          >
+            1. The Power of CSS Custom Properties (:root)
+          </h2>
+          <p style="margin-bottom: 1.4rem">
+            Declaring brand tokens globally inside <code>:root</code> gives your
+            entire project a single source of truth. If you decide to adjust
+            your primary palette or switch background shades, changing the
+            variable once propagates the update across every page immediately:
+          </p>
+
+          <!-- Code Block -->
+          <pre
+            style="
+              background: var(--bg-surface);
+              border: 1px solid var(--bg-surface-border);
+              padding: 1.4rem;
+              border-radius: var(--radius-sm);
+              font-family: monospace;
+              font-size: 0.9rem;
+              color: var(--emerald-accent);
+              overflow-x: auto;
+              margin-bottom: 1.8rem;
+              line-height: 1.6;
+            "
+          >
+:root {
+  --bg-deep: #030a09;
+  --bg-surface: #061513;
+  --gold-accent: #d4af37;
+  --emerald-accent: #14b8a6;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}</pre
+          >
+
+          <h2
+            style="
+              font-family: var(--font-serif);
+              font-size: 1.8rem;
+              margin: 2.2rem 0 1rem;
+              color: var(--gold-accent);
+            "
+          >
+            2. Shared Layout Headers and Footers
+          </h2>
+          <p style="margin-bottom: 1.4rem">
+            A cohesive interface builds credibility. By enforcing identical
+            navigation headers and footer structures across
+            <code>index.html</code>, <code>about.html</code>,
+            <code>blog.html</code>, and <code>contact.html</code>, visitors
+            encounter seamless page transitions with zero layout shift.
+          </p>
+
+          <blockquote
+            style="
+              background: rgba(20, 184, 166, 0.05);
+              border-left: 3px solid var(--emerald-accent);
+              padding: 1.2rem 1.6rem;
+              border-radius: var(--radius-sm);
+              margin: 2rem 0;
+              font-style: italic;
+              color: var(--text-muted);
+            "
+          >
+            "Consistency in design is not about rigid uniformity; it is about
+            building a system where every component feels intentionally
+            connected."
+          </blockquote>
+
+          <h2
+            style="
+              font-family: var(--font-serif);
+              font-size: 1.8rem;
+              margin: 2.2rem 0 1rem;
+              color: var(--gold-accent);
+            "
+          >
+            3. Mobile-First Responsiveness &amp; Overflow Guard
+          </h2>
+          <p style="margin-bottom: 1.6rem">
+            To prevent horizontal scrolling on mobile viewports, apply
+            <code>box-sizing: border-box</code> globally, set all images to
+            <code>max-width: 100%</code>, and use flexible CSS Grid columns like
+            <code>repeat(auto-fit, minmax(280px, 1fr))</code> for cards and
+            components.
+          </p>
+
+          <!-- Author Spotlight Card -->
+          <div
+            style="
+              background: var(--bg-surface);
+              border: 1px solid var(--bg-surface-border);
+              border-radius: var(--radius-md);
+              padding: 2rem;
+              margin: 3.5rem 0 2rem;
+              display: flex;
+              gap: 1.6rem;
+              align-items: center;
+              flex-wrap: wrap;
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=300&q=80"
+              alt="Sana Javed author avatar"
+              style="
+                width: 72px;
+                height: 72px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 2px solid var(--gold-accent);
+              "
+            />
+            <div style="flex: 1; min-width: 240px">
+              <h4
+                style="
+                  font-family: var(--font-serif);
+                  font-size: 1.15rem;
+                  margin-bottom: 0.3rem;
+                "
+              >
+                Sana Javed
+              </h4>
+              <p
+                style="
+                  font-size: 0.88rem;
+                  color: var(--text-muted);
+                  margin-bottom: 0.6rem;
+                "
+              >
+                Frontend Developer specializing in responsive design systems,
+                semantic HTML5, and accessible UI engineering.
+              </p>
+              <a
+                href="https://sanajaved-dev.vercel.app/"
+                target="_blank"
+                rel="noopener"
+                style="
+                  color: var(--emerald-accent);
+                  font-size: 0.82rem;
+                  font-weight: 600;
+                "
+              >
+                Visit Portfolio
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Navigation Between Articles -->
+          <div
+            style="
+              margin-top: 2.5rem;
+              padding-top: 2rem;
+              border-top: 1px solid var(--bg-surface-border);
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              flex-wrap: wrap;
+              gap: 1rem;
+            "
+          >
+            <a href="blog.html" class="btn btn-secondary">
+              <i class="fa-solid fa-arrow-left"></i> Back to All Posts
+            </a>
+            <a href="contact.html" class="btn btn-primary">
+              Contact Author <i class="fa-solid fa-paper-plane"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>AURA<span>.</span></h3>
+            <p>
+              A multi-page responsive web project crafted for The Sky Gen Web
+              Development Batch (Ref: TSG/WD/P03/2026).
+            </p>
+            <a
+              href="https://sanajaved-dev.vercel.app/"
+              target="_blank"
+              rel="noopener"
+              class="portfolio-link-chip"
+            >
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Sana
+              Javed Portfolio
+            </a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Developer</a></li>
+              <li><a href="blog.html">Blog Articles</a></li>
+              <li><a href="contact.html">Contact Form</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Developer</h4>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://sanajaved-dev.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  >Sana Javed (Portfolio)</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com" target="_blank" rel="noopener"
+                  >GitHub Profile</a
+                >
+              </li>
+              <li><a href="contact.html">Send a Message</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Aura Studio &bull; Developed by
+            <strong>Sana Javed</strong>.
+          </p>
+          <p>
+            <a
+              href="https://sanajaved-dev.vercel.app/"
+              target="_blank"
+              rel="noopener"
+              style="color: var(--gold-accent)"
+              >sanajaved-dev.vercel.app</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,959 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aura Studio Journal — Read technical articles filtered by categories, sub-categories, and hashtags with smooth pagination."
+    />
+    <meta name="author" content="Sana Javed" />
+    <title>AURA | Blog &amp; Live Filters</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Single Shared Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Shared Header -->
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand-title">AURA<span>.</span></a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="blog.html" class="nav-link active">Blog</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section
+        class="section-spacer"
+        style="padding-top: 3.5rem; padding-bottom: 2rem"
+      >
+        <div class="container section-head">
+          <span class="badge-tag">Knowledge Hub</span>
+          <h2>Journal &amp; Insights</h2>
+          <p id="filter-status-text">
+            Showing 6 posts per page. Filter by category or tags below.
+          </p>
+        </div>
+      </section>
+
+      <!-- Blog Layout with Sticky Sidebar -->
+      <div class="container">
+        <div class="blog-layout">
+          <!-- LEFT: Articles Container -->
+          <section>
+            <div class="blog-grid" id="blog-cards-container">
+              <!-- Post 1 -->
+              <article
+                class="blog-card"
+                data-tags="web stylesheets html5 modular"
+              >
+                <div class="card-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80"
+                    alt="Shared stylesheets architecture in VS Code"
+                  />
+                </div>
+                <div class="card-body">
+                  <span class="card-meta"
+                    >12 Oct 2026 &bull; Web Development</span
+                  >
+                  <h3 class="card-title">
+                    Shared Stylesheets in Multi-Page Applications
+                  </h3>
+                  <p class="card-text">
+                    Best practices for structuring single CSS files that load
+                    cleanly across all static pages without collisions or
+                    duplicate rules.
+                  </p>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 0.5rem;
+                      flex-wrap: wrap;
+                      margin-bottom: 1.2rem;
+                    "
+                  >
+                    <span class="tag-chip">#HTML5</span>
+                    <span class="tag-chip">#Stylesheets</span>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 1rem;
+                      align-items: center;
+                      margin-top: auto;
+                    "
+                  >
+                    <a href="#article-modal-1" class="card-cta"
+                      ><i class="fa-solid fa-eye"></i> Quick Read</a
+                    >
+                    <a
+                      href="post-single.html"
+                      class="card-cta"
+                      style="color: var(--gold-accent)"
+                      ><i class="fa-solid fa-arrow-right"></i> Full Article</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- Post 2 -->
+              <article
+                class="blog-card"
+                data-tags="web responsive flexbox mobile"
+              >
+                <div class="card-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=800&q=80"
+                    alt="Mobile responsive design tested on smartphone screen"
+                  />
+                </div>
+                <div class="card-body">
+                  <span class="card-meta"
+                    >04 Oct 2026 &bull; Web Development &bull; Mobile</span
+                  >
+                  <h3 class="card-title">
+                    Eliminating Mobile Overflow &amp; Horizontal Scroll
+                  </h3>
+                  <p class="card-text">
+                    How to manage CSS flexbox wrapping, media queries, and
+                    viewport constraints to guarantee flawless phone
+                    compatibility.
+                  </p>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 0.5rem;
+                      flex-wrap: wrap;
+                      margin-bottom: 1.2rem;
+                    "
+                  >
+                    <span class="tag-chip">#Responsive</span>
+                    <span class="tag-chip">#Flexbox</span>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 1rem;
+                      align-items: center;
+                      margin-top: auto;
+                    "
+                  >
+                    <a href="#article-modal-2" class="card-cta"
+                      ><i class="fa-solid fa-eye"></i> Quick Read</a
+                    >
+                    <a
+                      href="post-single.html"
+                      class="card-cta"
+                      style="color: var(--gold-accent)"
+                      ><i class="fa-solid fa-arrow-right"></i> Full Article</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- Post 3 -->
+              <article
+                class="blog-card"
+                data-tags="ui darktheme colors emerald design"
+              >
+                <div class="card-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80"
+                    alt="Dark mode neon palette with cyber-emerald and gold ambient interface"
+                  />
+                </div>
+                <div class="card-body">
+                  <span class="card-meta"
+                    >22 Sep 2026 &bull; UI / UX Engineering</span
+                  >
+                  <h3 class="card-title">
+                    Cyber-Emerald &amp; Champagne Gold Aesthetics
+                  </h3>
+                  <p class="card-text">
+                    Explore high-contrast deep palettes, glowing borders, and
+                    backdrop filters designed for modern portfolio experiences.
+                  </p>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 0.5rem;
+                      flex-wrap: wrap;
+                      margin-bottom: 1.2rem;
+                    "
+                  >
+                    <span class="tag-chip">#DarkTheme</span>
+                    <span class="tag-chip">#Colors</span>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 1rem;
+                      align-items: center;
+                      margin-top: auto;
+                    "
+                  >
+                    <a href="#article-modal-3" class="card-cta"
+                      ><i class="fa-solid fa-eye"></i> Quick Read</a
+                    >
+                    <a
+                      href="post-single.html"
+                      class="card-cta"
+                      style="color: var(--gold-accent)"
+                      ><i class="fa-solid fa-arrow-right"></i> Full Article</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- Post 4 -->
+              <article
+                class="blog-card"
+                data-tags="perf zerojs animation motion speed"
+              >
+                <div class="card-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
+                    alt="Hardware accelerated CSS keyframe glowing effects"
+                  />
+                </div>
+                <div class="card-body">
+                  <span class="card-meta"
+                    >15 Sep 2026 &bull; Performance &amp; Motion</span
+                  >
+                  <h3 class="card-title">
+                    Smooth CSS Micro-Interactions Without JavaScript
+                  </h3>
+                  <p class="card-text">
+                    Building interactive modal triggers, hover transforms, and
+                    button animations solely using native HTML5 and CSS3.
+                  </p>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 0.5rem;
+                      flex-wrap: wrap;
+                      margin-bottom: 1.2rem;
+                    "
+                  >
+                    <span class="tag-chip">#ZeroJS</span>
+                    <span class="tag-chip">#Animation</span>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 1rem;
+                      align-items: center;
+                      margin-top: auto;
+                    "
+                  >
+                    <a href="#article-modal-4" class="card-cta"
+                      ><i class="fa-solid fa-eye"></i> Quick Read</a
+                    >
+                    <a
+                      href="post-single.html"
+                      class="card-cta"
+                      style="color: var(--gold-accent)"
+                      ><i class="fa-solid fa-arrow-right"></i> Full Article</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- Post 5 -->
+              <article class="blog-card" data-tags="web html5 seo semantics">
+                <div class="card-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=800&q=80"
+                    alt="Semantic HTML5 development workspace"
+                  />
+                </div>
+                <div class="card-body">
+                  <span class="card-meta"
+                    >08 Sep 2026 &bull; Web Development</span
+                  >
+                  <h3 class="card-title">
+                    SEO Friendly HTML5 Document Outlining
+                  </h3>
+                  <p class="card-text">
+                    Proper utilization of main, aside, article, and semantic
+                    landmark elements for search engines and screen readers.
+                  </p>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 0.5rem;
+                      flex-wrap: wrap;
+                      margin-bottom: 1.2rem;
+                    "
+                  >
+                    <span class="tag-chip">#HTML5</span>
+                    <span class="tag-chip">#SEO</span>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 1rem;
+                      align-items: center;
+                      margin-top: auto;
+                    "
+                  >
+                    <a href="#article-modal-1" class="card-cta"
+                      ><i class="fa-solid fa-eye"></i> Quick Read</a
+                    >
+                    <a
+                      href="post-single.html"
+                      class="card-cta"
+                      style="color: var(--gold-accent)"
+                      ><i class="fa-solid fa-arrow-right"></i> Full Article</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- Post 6 -->
+              <article class="blog-card" data-tags="ui design typography scale">
+                <div class="card-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80"
+                    alt="Minimalist typography layout design"
+                  />
+                </div>
+                <div class="card-body">
+                  <span class="card-meta"
+                    >28 Aug 2026 &bull; UI / UX Engineering</span
+                  >
+                  <h3 class="card-title">
+                    Fluid Typography Scales with CSS Clamp
+                  </h3>
+                  <p class="card-text">
+                    Generating responsive font sizes that automatically
+                    calculate screen width without dozens of media query
+                    overrides.
+                  </p>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 0.5rem;
+                      flex-wrap: wrap;
+                      margin-bottom: 1.2rem;
+                    "
+                  >
+                    <span class="tag-chip">#Typography</span>
+                    <span class="tag-chip">#Design</span>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 1rem;
+                      align-items: center;
+                      margin-top: auto;
+                    "
+                  >
+                    <a href="#article-modal-2" class="card-cta"
+                      ><i class="fa-solid fa-eye"></i> Quick Read</a
+                    >
+                    <a
+                      href="post-single.html"
+                      class="card-cta"
+                      style="color: var(--gold-accent)"
+                      ><i class="fa-solid fa-arrow-right"></i> Full Article</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- Post 7 -->
+              <article class="blog-card" data-tags="perf speed webvitals">
+                <div class="card-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                    alt="Website speed analytics and performance scores"
+                  />
+                </div>
+                <div class="card-body">
+                  <span class="card-meta">19 Aug 2026 &bull; Performance</span>
+                  <h3 class="card-title">
+                    Mastering Core Web Vitals for Static Sites
+                  </h3>
+                  <p class="card-text">
+                    Minimizing Cumulative Layout Shift (CLS) and Largest
+                    Contentful Paint (LCP) on portfolio landing pages.
+                  </p>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 0.5rem;
+                      flex-wrap: wrap;
+                      margin-bottom: 1.2rem;
+                    "
+                  >
+                    <span class="tag-chip">#Speed</span>
+                    <span class="tag-chip">#WebVitals</span>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 1rem;
+                      align-items: center;
+                      margin-top: auto;
+                    "
+                  >
+                    <a href="#article-modal-3" class="card-cta"
+                      ><i class="fa-solid fa-eye"></i> Quick Read</a
+                    >
+                    <a
+                      href="post-single.html"
+                      class="card-cta"
+                      style="color: var(--gold-accent)"
+                      ><i class="fa-solid fa-arrow-right"></i> Full Article</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- Post 8 -->
+              <article
+                class="blog-card"
+                data-tags="web modular clean-code stylesheets"
+              >
+                <div class="card-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80"
+                    alt="Clean structured frontend code in editor"
+                  />
+                </div>
+                <div class="card-body">
+                  <span class="card-meta"
+                    >10 Aug 2026 &bull; Web Development</span
+                  >
+                  <h3 class="card-title">
+                    Clean Directory Structure for Hand-Offs
+                  </h3>
+                  <p class="card-text">
+                    Structuring your CSS, image assets, and documentation to
+                    pass institutional evaluations and code audits with ease.
+                  </p>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 0.5rem;
+                      flex-wrap: wrap;
+                      margin-bottom: 1.2rem;
+                    "
+                  >
+                    <span class="tag-chip">#Modular</span>
+                    <span class="tag-chip">#Stylesheets</span>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      gap: 1rem;
+                      align-items: center;
+                      margin-top: auto;
+                    "
+                  >
+                    <a href="#article-modal-4" class="card-cta"
+                      ><i class="fa-solid fa-eye"></i> Quick Read</a
+                    >
+                    <a
+                      href="post-single.html"
+                      class="card-cta"
+                      style="color: var(--gold-accent)"
+                      ><i class="fa-solid fa-arrow-right"></i> Full Article</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Pagination Bar -->
+            <div class="pagination-wrap" id="pagination-controls"></div>
+          </section>
+
+          <!-- RIGHT: Sticky Sidebar with Categories + Sub-categories + Tag Chips -->
+          <aside class="blog-sidebar">
+            <!-- Categories & Sub-Categories Filter -->
+            <div class="sidebar-widget">
+              <h3 class="sidebar-title">
+                <i class="fa-solid fa-folder-tree"></i> Categories
+              </h3>
+              <ul class="category-list">
+                <li class="category-item">
+                  <button
+                    type="button"
+                    class="filter-btn active"
+                    data-filter="all"
+                  >
+                    <span
+                      ><i
+                        class="fa-solid fa-border-all"
+                        style="margin-right: 0.5rem"
+                      ></i>
+                      All Dispatches</span
+                    >
+                    <span class="cat-count">8</span>
+                  </button>
+                </li>
+
+                <li class="category-item">
+                  <button type="button" class="filter-btn" data-filter="web">
+                    <span
+                      ><i
+                        class="fa-solid fa-code"
+                        style="margin-right: 0.5rem"
+                      ></i>
+                      Web Development</span
+                    >
+                    <span class="cat-count">4</span>
+                  </button>
+                  <ul class="sub-category-list">
+                    <li>
+                      <button
+                        type="button"
+                        class="filter-btn"
+                        data-filter="stylesheets"
+                        style="font-size: 0.82rem; padding: 0.25rem 0.5rem"
+                      >
+                        &bull; Shared Stylesheets
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        class="filter-btn"
+                        data-filter="responsive"
+                        style="font-size: 0.82rem; padding: 0.25rem 0.5rem"
+                      >
+                        &bull; Responsive Overflow
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="category-item">
+                  <button type="button" class="filter-btn" data-filter="ui">
+                    <span
+                      ><i
+                        class="fa-solid fa-palette"
+                        style="margin-right: 0.5rem"
+                      ></i>
+                      UI/UX Engineering</span
+                    >
+                    <span class="cat-count">2</span>
+                  </button>
+                  <ul class="sub-category-list">
+                    <li>
+                      <button
+                        type="button"
+                        class="filter-btn"
+                        data-filter="darktheme"
+                        style="font-size: 0.82rem; padding: 0.25rem 0.5rem"
+                      >
+                        &bull; Dark Emerald Themes
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        class="filter-btn"
+                        data-filter="typography"
+                        style="font-size: 0.82rem; padding: 0.25rem 0.5rem"
+                      >
+                        &bull; Fluid Typography
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="category-item">
+                  <button type="button" class="filter-btn" data-filter="perf">
+                    <span
+                      ><i
+                        class="fa-solid fa-gauge-high"
+                        style="margin-right: 0.5rem"
+                      ></i>
+                      Performance</span
+                    >
+                    <span class="cat-count">2</span>
+                  </button>
+                  <ul class="sub-category-list">
+                    <li>
+                      <button
+                        type="button"
+                        class="filter-btn"
+                        data-filter="zerojs"
+                        style="font-size: 0.82rem; padding: 0.25rem 0.5rem"
+                      >
+                        &bull; Zero-JS Patterns
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        class="filter-btn"
+                        data-filter="speed"
+                        style="font-size: 0.82rem; padding: 0.25rem 0.5rem"
+                      >
+                        &bull; Core Web Vitals
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tags & Topics Section -->
+            <div class="sidebar-widget">
+              <h3 class="sidebar-title">
+                <i class="fa-solid fa-hashtag"></i> Popular Tags
+              </h3>
+              <p
+                style="
+                  font-size: 0.78rem;
+                  color: var(--text-muted);
+                  margin-bottom: 0.8rem;
+                "
+              >
+                Click any tag to filter articles:
+              </p>
+              <div class="tag-cloud">
+                <button type="button" class="tag-btn" data-filter="html5">
+                  #HTML5
+                </button>
+                <button type="button" class="tag-btn" data-filter="stylesheets">
+                  #Stylesheets
+                </button>
+                <button type="button" class="tag-btn" data-filter="flexbox">
+                  #Flexbox
+                </button>
+                <button type="button" class="tag-btn" data-filter="responsive">
+                  #Responsive
+                </button>
+                <button type="button" class="tag-btn" data-filter="darktheme">
+                  #DarkTheme
+                </button>
+                <button type="button" class="tag-btn" data-filter="zerojs">
+                  #ZeroJS
+                </button>
+                <button type="button" class="tag-btn" data-filter="animation">
+                  #Animation
+                </button>
+                <button type="button" class="tag-btn" data-filter="typography">
+                  #Typography
+                </button>
+                <button type="button" class="tag-btn" data-filter="speed">
+                  #Speed
+                </button>
+                <button type="button" class="tag-btn" data-filter="modular">
+                  #Modular
+                </button>
+              </div>
+            </div>
+
+            <!-- Author Box -->
+            <div class="sidebar-widget" style="text-align: center">
+              <h3 class="sidebar-title" style="justify-content: center">
+                <i class="fa-solid fa-user-astronaut"></i> Sana Javed
+              </h3>
+              <p
+                style="
+                  font-size: 0.88rem;
+                  color: var(--text-muted);
+                  margin-bottom: 1.2rem;
+                "
+              >
+                Frontend Developer &bull; Discover full-stack and UI projects on
+                Vercel.
+              </p>
+              <a
+                href="https://sanajaved-dev.vercel.app/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-primary"
+                style="width: 100%; justify-content: center"
+              >
+                Visit Portfolio
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- Modals for Quick Reader -->
+      <div id="article-modal-1" class="modal-overlay">
+        <div class="modal-card">
+          <a href="#" class="modal-close-btn">&times;</a>
+          <span class="badge-tag">Quick Reader</span>
+          <h2>Shared Stylesheets in Multi-Page Applications</h2>
+          <p>
+            Using a single stylesheet guarantees zero color mismatches and
+            instant cached page loads across your website.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem">
+            <a href="post-single.html" class="btn btn-primary"
+              >Full Article Page</a
+            >
+            <a href="#" class="btn btn-secondary">Close</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="article-modal-2" class="modal-overlay">
+        <div class="modal-card">
+          <a href="#" class="modal-close-btn">&times;</a>
+          <span class="badge-tag">Quick Reader</span>
+          <h2>Eliminating Mobile Overflow &amp; Horizontal Scroll</h2>
+          <p>
+            Enforce <code>box-sizing: border-box</code> and fluid containers to
+            keep mobile screens responsive and stable.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem">
+            <a href="post-single.html" class="btn btn-primary"
+              >Full Article Page</a
+            >
+            <a href="#" class="btn btn-secondary">Close</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="article-modal-3" class="modal-overlay">
+        <div class="modal-card">
+          <a href="#" class="modal-close-btn">&times;</a>
+          <span class="badge-tag">Quick Reader</span>
+          <h2>Cyber-Emerald &amp; Champagne Gold Aesthetics</h2>
+          <p>
+            Combining dark emerald backgrounds with warm champagne gold borders
+            creates a distinctive modern identity.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem">
+            <a href="post-single.html" class="btn btn-primary"
+              >Full Article Page</a
+            >
+            <a href="#" class="btn btn-secondary">Close</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="article-modal-4" class="modal-overlay">
+        <div class="modal-card">
+          <a href="#" class="modal-close-btn">&times;</a>
+          <span class="badge-tag">Quick Reader</span>
+          <h2>Smooth CSS Micro-Interactions Without JavaScript</h2>
+          <p>
+            Native CSS keyframes and transitions deliver 60fps micro-animations
+            without external libraries.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem">
+            <a href="post-single.html" class="btn btn-primary"
+              >Full Article Page</a
+            >
+            <a href="#" class="btn btn-secondary">Close</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>AURA<span>.</span></h3>
+            <p>
+              A multi-page responsive web project crafted for The Sky Gen Web
+              Development Batch (Ref: TSG/WD/P03/2026).
+            </p>
+            <a
+              href="https://sanajaved-dev.vercel.app/"
+              target="_blank"
+              rel="noopener"
+              class="portfolio-link-chip"
+            >
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Sana
+              Javed Portfolio
+            </a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Developer</a></li>
+              <li><a href="blog.html">Blog Articles</a></li>
+              <li><a href="contact.html">Contact Form</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Developer</h4>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://sanajaved-dev.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  >Sana Javed (Portfolio)</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com" target="_blank" rel="noopener"
+                  >GitHub Profile</a
+                >
+              </li>
+              <li><a href="contact.html">Send a Message</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Aura Studio &bull; Developed by
+            <strong>Sana Javed</strong>.
+          </p>
+          <p>
+            <a
+              href="https://sanajaved-dev.vercel.app/"
+              target="_blank"
+              rel="noopener"
+              style="color: var(--gold-accent)"
+              >sanajaved-dev.vercel.app</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Unified Filter & Pagination Engine -->
+    <script>
+      const POSTS_PER_PAGE = 6;
+      let currentPage = 1;
+      let currentFilter = "all";
+
+      const allCards = Array.from(document.querySelectorAll(".blog-card"));
+      const allFilterButtons = document.querySelectorAll(
+        ".filter-btn, .tag-btn",
+      );
+      const paginationControls = document.getElementById("pagination-controls");
+      const statusText = document.getElementById("filter-status-text");
+
+      function renderPage() {
+        // 1. Filter cards by current selected Category or Tag
+        const matchedCards = allCards.filter((card) => {
+          const cardTags = card.getAttribute("data-tags").toLowerCase();
+          return currentFilter === "all" || cardTags.includes(currentFilter);
+        });
+
+        const totalMatched = matchedCards.length;
+        const totalPages = Math.ceil(totalMatched / POSTS_PER_PAGE) || 1;
+
+        if (currentPage > totalPages) currentPage = totalPages;
+
+        // 2. Hide all cards initially
+        allCards.forEach((card) => card.classList.add("is-hidden"));
+
+        // 3. Slice and show exactly 6 posts for this page
+        const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+        const endIndex = startIndex + POSTS_PER_PAGE;
+        const visibleCards = matchedCards.slice(startIndex, endIndex);
+
+        visibleCards.forEach((card) => card.classList.remove("is-hidden"));
+
+        // 4. Update Header status text
+        if (totalMatched === 0) {
+          statusText.textContent = `No posts found matching tag: "${currentFilter}".`;
+        } else if (currentFilter === "all") {
+          statusText.textContent = `Showing ${visibleCards.length} of ${totalMatched} posts (Page ${currentPage} of ${totalPages}).`;
+        } else {
+          statusText.textContent = `Filtered by #${currentFilter}: Showing ${visibleCards.length} of ${totalMatched} posts (Page ${currentPage} of ${totalPages}).`;
+        }
+
+        // 5. Render Pagination
+        renderPaginationButtons(totalPages);
+      }
+
+      function renderPaginationButtons(totalPages) {
+        paginationControls.innerHTML = "";
+
+        if (totalPages <= 1) return; // Hide pagination buttons if 6 or fewer posts
+
+        // Prev Button
+        const prevBtn = document.createElement("button");
+        prevBtn.className = "page-btn";
+        prevBtn.innerHTML = '<i class="fa-solid fa-arrow-left"></i> Prev';
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.onclick = () => {
+          if (currentPage > 1) {
+            currentPage--;
+            renderPage();
+            window.scrollTo({ top: 220, behavior: "smooth" });
+          }
+        };
+        paginationControls.appendChild(prevBtn);
+
+        // Numbered Page Buttons
+        for (let i = 1; i <= totalPages; i++) {
+          const pageBtn = document.createElement("button");
+          pageBtn.className = `page-btn ${i === currentPage ? "active" : ""}`;
+          pageBtn.textContent = i;
+          pageBtn.onclick = () => {
+            currentPage = i;
+            renderPage();
+            window.scrollTo({ top: 220, behavior: "smooth" });
+          };
+          paginationControls.appendChild(pageBtn);
+        }
+
+        // Next Button
+        const nextBtn = document.createElement("button");
+        nextBtn.className = "page-btn";
+        nextBtn.innerHTML = 'Next <i class="fa-solid fa-arrow-right"></i>';
+        nextBtn.disabled = currentPage === totalPages;
+        nextBtn.onclick = () => {
+          if (currentPage < totalPages) {
+            currentPage++;
+            renderPage();
+            window.scrollTo({ top: 220, behavior: "smooth" });
+          }
+        };
+        paginationControls.appendChild(nextBtn);
+      }
+
+      // Filter Handler: Works across Category buttons, Sub-category buttons, and Tag chips
+      allFilterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          allFilterButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          currentFilter = btn.getAttribute("data-filter").toLowerCase();
+          currentPage = 1; // Reset to page 1 on any filter click
+          renderPage();
+        });
+      });
+
+      // Initial Run on Load
+      renderPage();
+    </script>
+  </body>
+</html>
